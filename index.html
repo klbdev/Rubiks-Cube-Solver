@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Rubik's Cube Solver</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="interface">
+            <section class="input-container">
+                <div class="palette">
+                    <div class="color-btn white selected"></div>
+                    <div class="color-btn orange"></div>
+                    <div class="color-btn green"></div>
+                    <div class="color-btn red"></div>
+                    <div class="color-btn blue"></div>
+                    <div class="color-btn yellow"></div>
+                </div>
+
+                <div class="cube-net-container">
+                    <!-- each face is a 3x3 grid of 'stickers', indexed from 0-8. index 4 (center) is fixed -->
+                    <div class="face U">
+                        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker white fixed"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker" ></div><div class="sticker"></div>
+                    </div>
+
+                    <div class="face L">
+                        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker orange fixed"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker" ></div><div class="sticker"></div>
+                    </div>
+
+                    <div class="face F">
+                        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker green fixed"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker" ></div><div class="sticker"></div>
+                    </div>
+
+                    <div class="face R">
+                        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker red fixed"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker" ></div><div class="sticker"></div>
+                    </div>
+
+                    <div class="face B">
+                        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker blue fixed"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker" ></div><div class="sticker"></div>
+                    </div>
+
+                    <div class="face D">
+                        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker yellow fixed"></div><div class="sticker"></div>
+                        <div class="sticker"></div><div class="sticker" ></div><div class="sticker"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="btn solve-btn">Solve</button>
+                    <button class="btn set-identity-cube-btn">Identity Cube</button>
+                    <button class="btn reset-cube-btn">Reset</button>
+                </div>
+            </section>
+
+            <section class="output-container">
+                <h1>Solution</h1>
+                <div class="solution-card">
+                    <span class="step-counter"></span>
+                    <p class="solution-line">Your solution appears here...</p>
+                </div>
+
+                <div class="stepper-container">
+                    <div class="step-btns-container">
+                        <button class="btn previous-btn">Previous</button>
+                        <button class="btn next-btn">Next</button>
+                    </div>
+                    <div class="progress-bar"><div class="progress-bar-fill"></div></div>
+                    <span class="completion-rate">0% complete</span> 
+                </div>
+
+                <h2>Legend</h2>
+                <div class="legend-container">
+                    <div class="cube-net-legend flex-center-template">
+                        <div class="face U">U</div>
+                        <div class="face L">L</div>
+                        <div class="face F">F</div>
+                        <div class="face R">R</div>
+                        <div class="face B">B</div>
+                        <div class="face D">D</div>
+                    </div>
+                    <div class="face index-layout flex-center-template">
+                            <div>0</div><div>1</div><div>2</div>
+                            <div>3</div><div>4</div><div>5</div>
+                            <div>6</div><div>7</div><div>8</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Credits: https://github.com/cs0x7f/min2phase.js/blob/master/README.md -->
+        <script src="min2phase.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

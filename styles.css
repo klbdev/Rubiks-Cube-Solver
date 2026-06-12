@@ -1,0 +1,190 @@
+body {
+    background-image: radial-gradient(rgb(79, 79, 79) 5%, rgb(44, 44, 44));
+    height: 100vh;
+}
+
+.interface {
+    display: flex;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #f8fafc;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+}
+
+.output-container {
+    flex: 1;
+}
+
+.palette {
+    display: flex;
+    padding: 6px;
+    justify-content: space-evenly;
+    width: 350px;
+    border-radius: 8px;
+    background-color: #f4a86a;
+}
+
+.color-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+
+.color-btn.selected {
+    border-color: #f4a86a;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.3);
+}
+
+.white, .sticker.white:not(.fixed) { background-color: #ffffff; }
+.orange, .sticker.orange:not(.fixed) { background-color: #ff5800; }
+.green, .sticker.green:not(.fixed) { background-color: #009e60; }
+.red, .sticker.red:not(.fixed) { background-color: #c41e3a; }
+.blue, .sticker.blue:not(.fixed) { background-color: #0051ba; }
+.yellow, .sticker.yellow:not(.fixed) { background-color: #ffd500; }
+
+/* Cube net has 4 columns and 3 rows */
+.cube-net-container {
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+    grid-template-columns: repeat(4, 140px);
+    grid-template-rows: repeat(3, 140px);
+    gap: 10px;
+}
+
+.legend-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.legend-container .cube-net-legend {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(3, 70px);
+    gap: 5px;
+}
+
+/* This template centralises text within a grid. */
+.flex-center-template > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    font-size: 200%;
+}
+
+.legend-container .index-layout {
+    border: 1px solid black;
+    width: 140px;
+    height: 140px;
+}
+
+/* Configuring the row and column indices for the cube net */
+.face.U { grid-column: 2; grid-row: 1; }
+.face.L { grid-column: 1; grid-row: 2; }
+.face.F { grid-column: 2; grid-row: 2; }
+.face.R { grid-column: 3; grid-row: 2; }
+.face.B { grid-column: 4; grid-row: 2; }
+.face.D { grid-column: 2; grid-row: 3; }
+
+/* Each face is a 3x3 grid of stickers */
+.face {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid rgb(153, 153, 153);
+}
+
+.face > .sticker {
+    border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Default grey color for unpainted stickers */
+.sticker:not(.fixed) {
+    background-color: #555555;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+/* Fix center sticker color */
+.sticker.fixed {
+    border-radius: 3px;
+    cursor: not-allowed;
+}
+
+.solution-card {
+    padding: 8px;
+    font-size: 24px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px #ababab;
+}
+
+.step-counter {
+    font-size: 20px;
+}
+
+.stepper-container {
+    width: 230px;
+    margin-top: 15px;
+}
+
+.step-btns-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3b3b3b;
+    border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: #c2c2c2;
+    background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 75%
+    );
+    cursor: pointer;
+}
+
+.solve-btn {
+    background-color: #e5c965;
+}
+
+.progress-bar {
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.03);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, #4caf50, #8bc34a);
+    transition: width 0.4s ease-out;
+}
+
+
+
+
