@@ -49,7 +49,7 @@ start index.html
 ### 'Identity Cube' button
 - This button renders the solved cube state on the Rubik's cube net.
 ### 'Reset' button
-- Use this button to reset the Rubik's cube net and the solution interface.
+- Resets the Rubik's cube net and the solution interface.
 ### 'Previous' and 'Next' buttons
 - These buttons allow you to cycle through the solutions one step at a time to minimise the possibility of skipping steps.
 ### Step counter and progress bar
