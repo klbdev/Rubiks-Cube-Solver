@@ -56,6 +56,7 @@ start index.html
 - These elements provide visual feedback on the completion rate of your Rubik's cube.
 
 ## Testing
+[Video](https://youtu.be/xPaNP0tf73Q) demonstration of the user interface on a randomly scrambled cube.
 
 ## Acknowledgements
 - Herbert Kociemba's [Two-Phase Algorithm](http://www.kociemba.org/cube.htm).
