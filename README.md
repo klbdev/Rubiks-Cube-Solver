@@ -1,5 +1,5 @@
 # Rubiks-Cube-Solver
-A web application that can solve any Rubik's cube using Herbert Kociemba's Two-Phase Algorithm.
+A web application with an interactive user interface that can solve any Rubik's cube using Herbert Kociemba's Two-Phase Algorithm.
 
 ## Table of contents
 - [Installation](#installation)
