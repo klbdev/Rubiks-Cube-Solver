@@ -6,6 +6,7 @@ A web application with an interactive user interface that can solve any Rubik's 
 - [Usage](#usage)
 - [Features](#features)
 - [Testing](#testing)
+- [Acknowledgements](#acknowledgements)
 
 ## Installation
 ### Option 1: Using Git Bash.
